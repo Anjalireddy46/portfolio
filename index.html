@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Anjali NagiReddy — Portfolio</title>
+  <meta name="description" content="Portfolio of Anjali NagiReddy — Software Engineer / Web Developer" />
+  <style>
+    :root{
+      --bg:#0f1724;
+      --card:#0b1220;
+      --muted:#9aa4b2;
+      --accent:#6ee7b7;
+      --glass: rgba(255,255,255,0.03);
+      --radius:14px;
+      font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      color-scheme: dark;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;background:linear-gradient(180deg,#071024 0%,var(--bg) 100%);color:#e6eef6}
+    .container{max-width:1000px;margin:36px auto;padding:28px;}
+    header{display:flex;gap:20px;align-items:center}
+    .avatar{
+      width:110px;height:110px;border-radius:18px;background:linear-gradient(135deg,var(--accent),#60a5fa);
+      display:flex;align-items:center;justify-content:center;font-weight:700;font-size:32px;
+      color:#042029;box-shadow:0 8px 30px rgba(2,6,23,0.7);
+    }
+    h1{margin:0;font-size:28px;letter-spacing:0.2px}
+    .sub{color:var(--muted);font-size:14px;margin-top:6px}
+    .top-right{margin-left:auto;text-align:right}
+    .contact{display:flex;flex-direction:column;gap:6px;font-size:14px}
+    .card{background:var(--card);padding:18px;border-radius:var(--radius);margin-top:18px;box-shadow: 0 6px 20px rgba(2,6,23,0.6)}
+    nav{display:flex;gap:12px;margin-top:14px;flex-wrap:wrap}
+    nav a{color:var(--muted);text-decoration:none;padding:8px 12px;border-radius:10px;font-size:14px}
+    nav a:hover{background:var(--glass);color:var(--accent)}
+    section{margin-top:18px}
+    .grid{display:grid;grid-template-columns: 1fr 320px;gap:18px}
+    .skills{display:flex;flex-wrap:wrap;gap:8px}
+    .chip{background:rgba(255,255,255,0.03);padding:8px 10px;border-radius:999px;font-size:13px;color:var(--muted)}
+    .project{border-left:3px solid rgba(110,231,183,0.08);padding:12px;border-radius:8px;background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent)}
+    .project h4{margin:0 0 6px 0}
+    footer{text-align:center;color:var(--muted);font-size:13px;margin-top:20px}
+    a.btn{display:inline-block;padding:10px 14px;border-radius:10px;background:linear-gradient(90deg,var(--accent),#60a5fa);color:#042029;text-decoration:none;font-weight:600}
+    /* Responsive */
+    @media (max-width:900px){
+      .grid{grid-template-columns:1fr; }
+      .top-right{text-align:left;margin-top:8px}
+      header{flex-wrap:wrap}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="avatar" aria-hidden="true">AR</div>
+      <div>
+        <h1>Anjali NagiReddy</h1>
+        <div class="sub">Aspiring Software Engineer • Web Developer • Machine Learning Enthusiast</div>
+        <nav>
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#skills">Skills</a>
+          <a href="#education">Education</a>
+          <a href="#certs">Certifications</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+
+      <div class="top-right">
+        <div class="contact card" style="min-width:200px">
+          <div><strong>NGO colony – Narasaropet, India</strong></div>
+          <div class="sub">Phone: <a href="tel:+918639649982" style="color:var(--accent);text-decoration:none">8639649982</a></div>
+          <div class="sub">Email: <a href="mailto:221FA04246@gmai.com" style="color:var(--accent);text-decoration:none">221FA04246@gmai.com</a></div>
+          <div class="sub">LinkedIn: <a href="https://www.linkedin.com/in/Anjali%20Reddy" target="_blank" style="color:var(--accent)">Anjali Reddy</a></div>
+          <div style="margin-top:8px"><a class="btn" href="#contact">Hire / Contact</a></div>
+        </div>
+      </div>
+    </header>
+
+    <main class="card">
+      <div id="about" class="section">
+        <h3>Objective</h3>
+        <p style="color:var(--muted);margin-top:6px">
+          Detail-oriented and quick learner aspiring to begin a career as a Software Engineer, focusing on applying technical knowledge, collaborating in teams, and continuously enhancing skills.
+        </p>
+      </div>
+
+      <div class="grid">
+        <div>
+          <section id="projects" class="card">
+            <h3>Academic & Personal Projects</h3>
+
+            <div class="project" style="margin-top:12px">
+              <h4>Portfolio Website</h4>
+              <div class="sub">Personal portfolio site — HTML/CSS/JS.</div>
+              <p class="sub" style="margin-top:8px">A responsive portfolio showcasing projects and contact details.</p>
+            </div>
+
+            <div class="project" style="margin-top:12px">
+              <h4>Machine Learning Model (Protein structure prediction)</h4>
+              <div class="sub">CNN-based feature extraction for predictive modelling.</div>
+              <p class="sub" style="margin-top:8px">Explored convolutional architectures and feature pipelines to predict protein structure attributes.</p>
+            </div>
+
+            <div class="project" style="margin-top:12px">
+              <h4>Recipe Collection Platform</h4>
+              <div class="sub">HTML/CSS/JS, Node.js, Express, MongoDB, React</div>
+              <p class="sub" style="margin-top:8px">Full-stack app to add, search and curate recipes with user accounts and MongoDB storage.</p>
+            </div>
+
+            <div class="project" style="margin-top:12px">
+              <h4>Internship Work — Internpe (Remote) — Web Development Intern (2025)</h4>
+              <div class="sub">Implemented tasks such as a Quiz App, To-Do list app, E-commerce site prototype, and a Basic Calculator.</div>
+            </div>
+          </section>
+
+          <section id="skills" class="card" style="margin-top:14px">
+            <h3>Skills</h3>
+            <div class="skills" style="margin-top:10px">
+              <span class="chip">HTML / CSS / JavaScript</span>
+              <span class="chip">React</span>
+              <span class="chip">Node.js & Express</span>
+              <span class="chip">MongoDB</span>
+              <span class="chip">MySQL</span>
+              <span class="chip">Python</span>
+              <span class="chip">C</span>
+              <span class="chip">Machine Learning (CNNs)</span>
+            </div>
+          </section>
+
+          <section id="certs" class="card" style="margin-top:14px">
+            <h3>Certifications</h3>
+            <ul class="sub" style="margin-left:16px">
+              <li>NPTEL — E-Business</li>
+              <li>NPTEL — Leadership & Team Effectiveness</li>
+              <li>Cambridge — Preliminary English Test (PET)</li>
+            </ul>
+          </section>
+
+        </div> <!-- left column -->
+
+        <aside>
+          <section id="education" class="card">
+            <h3>Education</h3>
+            <p class="sub" style="margin-top:6px"><strong>Vignan’s Foundation for Science, Technology & Research, Guntur</strong><br/>Bachelor of Science in Computer Science (2022–2026)</p>
+          </section>
+
+          <section class="card" style="margin-top:14px">
+            <h3>Contact & Resume</h3>
+            <p class="sub" style="margin-top:6px">Phone: <a href="tel:+918639649982" style="color:var(--accent)">8639649982</a></p>
+            <p class="sub">Email: <a href="mailto:221FA04246@gmai.com" style="color:var(--accent)">221FA04246@gmai.com</a></p>
+            <p class="sub">LinkedIn: <a href="https://www.linkedin.com/in/Anjali%20Reddy" target="_blank" style="color:var(--accent)">Profile</a></p>
+            <p class="sub" style="margin-top:10px">Download resume (place `resumee.pdf` in same folder):</p>
+            <p><a href="resumee.pdf" class="btn" download>Download Resume</a></p>
+          </section>
+
+          <section class="card" style="margin-top:14px">
+            <h3>Languages</h3>
+            <div class="sub" style="margin-top:6px">English — Fluent<br/>Telugu — Native</div>
+          </section>
+        </aside>
+      </div> <!-- grid -->
+
+      <section id="contact" class="card" style="margin-top:18px">
+        <h3>Contact Me</h3>
+        <p class="sub" style="margin-top:6px">I'm open to internships and entry-level software engineering roles. Send a message and I'll get back to you.</p>
+
+        <form id="contactForm" style="margin-top:12px;display:grid;grid-template-columns:1fr 1fr;gap:10px">
+          <input name="name" placeholder="Your name" required style="padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit" />
+          <input name="email" placeholder="Your email" required style="padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit" />
+          <input name="subject" placeholder="Subject" style="grid-column:1 / -1;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit" />
+          <textarea name="message" placeholder="Message" rows="4" style="grid-column:1 / -1;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit"></textarea>
+          <div style="grid-column:1 / -1;text-align:right">
+            <!-- This form uses mailto as a fallback. Replace with your preferred backend endpoint. -->
+            <button type="submit" class="btn">Send Message</button>
+          </div>
+        </form>
+
+        <p class="sub" style="margin-top:12px">Or email directly: <a href="mailto:221FA04246@gmai.com" style="color:var(--accent)">221FA04246@gmai.com</a></p>
+      </section>
+
+      <footer>
+        Built with ❤️ • Based on resume details. :contentReference[oaicite:1]{index=1}
+      </footer>
+    </main>
+  </div>
+
+  <script>
+    // contact form: basic mailto fallback (no backend). Replace action for real usage.
+    document.getElementById('contactForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      const form = e.target;
+      const name = encodeURIComponent(form.name.value.trim());
+      const email = encodeURIComponent(form.email.value.trim());
+      const subject = encodeURIComponent(form.subject.value.trim() || 'Portfolio contact');
+      const message = encodeURIComponent('From: ' + name + ' (' + email + ')\\n\\n' + form.message.value.trim());
+      // Opens user's email client
+      window.location.href = `mailto:221FA04246@gmai.com?subject=${subject}&body=${message}`;
+    });
+  </script>
+</body>
+</html>
