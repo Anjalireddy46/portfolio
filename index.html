@@ -20,11 +20,22 @@
     html,body{height:100%;margin:0;background:linear-gradient(180deg,#071024 0%,var(--bg) 100%);color:#e6eef6}
     .container{max-width:1000px;margin:36px auto;padding:28px;}
     header{display:flex;gap:20px;align-items:center}
+    
+    /* --- Updated avatar section to show your photo --- */
     .avatar{
-      width:110px;height:110px;border-radius:18px;background:linear-gradient(135deg,var(--accent),#60a5fa);
-      display:flex;align-items:center;justify-content:center;font-weight:700;font-size:32px;
-      color:#042029;box-shadow:0 8px 30px rgba(2,6,23,0.7);
+      width:110px;
+      height:110px;
+      border-radius:18px;
+      overflow:hidden;
+      box-shadow:0 8px 30px rgba(2,6,23,0.7);
     }
+    .avatar img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      border-radius:18px;
+    }
+
     h1{margin:0;font-size:28px;letter-spacing:0.2px}
     .sub{color:var(--muted);font-size:14px;margin-top:6px}
     .top-right{margin-left:auto;text-align:right}
@@ -41,6 +52,7 @@
     .project h4{margin:0 0 6px 0}
     footer{text-align:center;color:var(--muted);font-size:13px;margin-top:20px}
     a.btn{display:inline-block;padding:10px 14px;border-radius:10px;background:linear-gradient(90deg,var(--accent),#60a5fa);color:#042029;text-decoration:none;font-weight:600}
+    
     /* Responsive */
     @media (max-width:900px){
       .grid{grid-template-columns:1fr; }
@@ -52,7 +64,12 @@
 <body>
   <div class="container">
     <header>
-      <div class="avatar" aria-hidden="true">AR</div>
+
+      <!-- Replace yourphoto.jpg with the actual image you upload -->
+      <div class="avatar">
+        <img src="C:\Users\MADHU\Downloads\Anjalinagireddy.jpg" alt="Anjali NagiReddy">
+      </div>
+
       <div>
         <h1>Anjali NagiReddy</h1>
         <div class="sub">Aspiring Software Engineer • Web Developer • Machine Learning Enthusiast</div>
@@ -80,7 +97,7 @@
     <main class="card">
       <div id="about" class="section">
         <h3>Objective</h3>
-        <p style="color:var(--muted);margin-top:6px">
+        <p class="sub" style="margin-top:6px">
           Detail-oriented and quick learner aspiring to begin a career as a Software Engineer, focusing on applying technical knowledge, collaborating in teams, and continuously enhancing skills.
         </p>
       </div>
@@ -136,8 +153,7 @@
               <li>Cambridge — Preliminary English Test (PET)</li>
             </ul>
           </section>
-
-        </div> <!-- left column -->
+        </div>
 
         <aside>
           <section id="education" class="card">
@@ -150,7 +166,7 @@
             <p class="sub" style="margin-top:6px">Phone: <a href="tel:+918639649982" style="color:var(--accent)">8639649982</a></p>
             <p class="sub">Email: <a href="mailto:221fa04246@gmai.com" style="color:var(--accent)">221FA04246@gmai.com</a></p>
             <p class="sub">LinkedIn: <a href="https://www.linkedin.com/in/Anjali%20Reddy" target="_blank" style="color:var(--accent)">Profile</a></p>
-            <p class="sub" style="margin-top:10px">Download resume (place `resumee.pdf` in same folder):</p>
+            <p class="sub" style="margin-top:10px">Download resume:</p>
             <p><a href="resumee.pdf" class="btn" download>Download Resume</a></p>
           </section>
 
@@ -159,7 +175,7 @@
             <div class="sub" style="margin-top:6px">English — Fluent<br/>Telugu — Native</div>
           </section>
         </aside>
-      </div> <!-- grid -->
+      </div>
 
       <section id="contact" class="card" style="margin-top:18px">
         <h3>Contact Me</h3>
@@ -171,22 +187,22 @@
           <input name="subject" placeholder="Subject" style="grid-column:1 / -1;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit" />
           <textarea name="message" placeholder="Message" rows="4" style="grid-column:1 / -1;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit"></textarea>
           <div style="grid-column:1 / -1;text-align:right">
-            <!-- This form uses mailto as a fallback. Replace with your preferred backend endpoint. -->
             <button type="submit" class="btn">Send Message</button>
           </div>
         </form>
 
-        <p class="sub" style="margin-top:12px">Or email directly: <a href="mailto:221FA04246@gmai.com" style="color:var(--accent)">221fa04246@gmai.com</a></p>
+        <p class="sub" style="margin-top:12px">Or email directly: 
+          <a href="mailto:221FA04246@gmai.com" style="color:var(--accent)">221fa04246@gmai.com</a>
+        </p>
       </section>
 
       <footer>
-        Built with ❤️ • Based on resume details. :contentReference[oaicite:1]{index=1}
+        Built with ❤️ • Based on resume details.
       </footer>
     </main>
   </div>
 
   <script>
-    // contact form: basic mailto fallback (no backend). Replace action for real usage.
     document.getElementById('contactForm').addEventListener('submit', function(e){
       e.preventDefault();
       const form = e.target;
@@ -194,11 +210,8 @@
       const email = encodeURIComponent(form.email.value.trim());
       const subject = encodeURIComponent(form.subject.value.trim() || 'Portfolio contact');
       const message = encodeURIComponent('From: ' + name + ' (' + email + ')\\n\\n' + form.message.value.trim());
-      // Opens user's email client
       window.location.href = `mailto:221FA04246@gmai.com?subject=${subject}&body=${message}`;
     });
   </script>
 </body>
 </html>
-
-
